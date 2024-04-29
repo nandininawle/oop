@@ -1,0 +1,31 @@
+
+
+class StringMethod
+    {
+       public static void main(String[] args)
+        {
+          String s1=new String("Hello");
+	  String s2=new String("World");
+	String s3=new String("HelloWorld");
+	String s4=s1.concat(s2);
+	if(s3.equals(s4))
+	   {
+ 	     System.out.println("Equal using equals method");
+           }
+	else
+	   {
+	     System.out.println("Not Equal");
+	   }
+	if(s3==s4)   //
+	   {
+ 	     System.out.println("Equal using Equal operator");
+           }
+	else
+	   {
+	     System.out.println("Not Equal using Equal operator");
+	   }
+          
+	System.out.println(s4.substring(0,s1.length()));
+	System.out.println(s4.substring(s1.length()));
+       }
+    }
