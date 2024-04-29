@@ -1,0 +1,51 @@
+enum Calc
+{
+ADD
+{
+public double getCalculator(double num1,double num2)
+{
+return num1+num2;
+}
+},
+SUB
+{
+public double getCalculator(double num1,double num2)
+{
+return num1-num2;
+}
+},
+MUL
+{
+public double getCalculator(double num1,double num2)
+{
+return num1*num2;
+}
+},
+DIV
+{
+public double getCalculator(double num1,double num2)
+{
+
+return num1/num2;
+}
+},
+REM
+{
+public double getCalculator(double num1,double num2)
+{
+return num1%num2;
+}
+};
+public abstract double getCalculator(double num1,double num2);
+}
+class EnumCalculator
+{
+public static void main(String[] args)
+{
+Calc[] c = Calc.values();
+for(Calc c1: c)
+{
+System.out.println(c1+":"+c1.getCalculator(84,4));
+}
+}
+}
