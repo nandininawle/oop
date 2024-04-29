@@ -1,0 +1,96 @@
+class TestPerson
+{
+public static void main(String[] args)
+{
+//object for address class
+Address address = new Address("Pune", "411052");
+Person p1 = new Person("ABC","XYZ",address);
+System.out.println(p1);
+p1.getAddress().setPincode("411028");
+System.out.println(p1);
+}
+}
+class Person
+{
+String fname;
+String lname;
+Address address;
+Person(String fname, String lname, Address address)
+{
+this.fname = fname;
+this.lname = lname;
+//this.address = address;
+//for making immuntable again:
+this.address = new Address(address.getCity(), address.getPincode());
+}
+public String toString()
+{
+return "Person:"+fname+" "+lname+""+address;
+}
+//getter for first name
+public String get_fname()
+{
+return fname;
+}
+//getter for last name
+public String get_lname()
+{
+
+return lname;
+}
+//getter for address
+public Address getAddress()
+{
+//mutuable class
+// return address;
+//immuntable:
+return new
+Address(address.getCity(),
+address.getPincode()); }
+//setter for first name
+// for making strings immutable remove setters
+/*public void set_fname(String fname) {
+this.fname = fname;
+}
+//setter for last name
+public void set_lname(String lname)
+{
+this.lname = lname;
+}*/
+//main class
+}
+//Address class
+class Address
+{
+String city, pincode;
+Address(String city, String pincode)
+{
+this.city = city;
+this.pincode = pincode;
+}
+public String toString()
+{
+return city+" "+pincode;
+}
+//getter for city
+public String getCity()
+{
+return city;
+}
+//getter for pincode
+public String getPincode()
+
+{
+return pincode;
+}
+//setter for city
+public void setCity(String city)
+{
+this.city = city;
+}
+//setter for pincode
+public void setPincode(String pincode)
+{
+this.pincode = pincode;
+}
+}
