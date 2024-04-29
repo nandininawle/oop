@@ -1,0 +1,62 @@
+
+
+class EmploeyeeDemo
+ {
+  public static void main(String[] args)
+   {
+     Employee e1=new Employee("ABC","XYZ");
+     Employee e2=new Employee("PQR","MNO");
+     Employee e3=new Employee("ABC","XYZ");
+     Employee e4=e1;
+
+     System.out.println(e1.equals(e2));
+     System.out.println(e1.equals(e3));
+     System.out.println(e1.equals(e4));
+     System.out.println(e1.equals("ABC"));
+     System.out.println(e1.equals(null));
+   }
+ }
+
+class Employee
+{
+  String fname;
+  String lname;
+
+  Employee(String fname,String lname)
+   {
+     this.fname=fname;
+     this.lname=lname;
+   }
+
+
+ public String toString()
+ {
+  return fname + " "+lname;
+ }
+
+
+ public boolean equals (Object obj)
+ {
+  try
+   {
+   Employee e=(Employee)obj;
+    if(fname.equals(e.fname) && lname.equals(e.lname))
+      return true;
+    else
+      return false;
+   }
+  catch(ClassCastException e1)
+   {
+     return false;
+   }
+  catch(NullPointerException e1)
+   {
+     return false;
+   }
+ }
+
+}
+
+
+
+
