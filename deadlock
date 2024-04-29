@@ -1,9 +1,4 @@
-/*
-Name: Nandini Nawle
-Batch:B3
-Cno:UEC2022258
 
-*/
 
 
 import java.util.Arrays;
@@ -99,13 +94,3 @@ class Data
 
 
 
-/*
-research@research-desktop:~/Desktop/UEC2022258$ java DeadLockTest
-Thread-0trying to get lock0
-Thread-1trying to get lock1
-got lock1
-Thread-0got lock0&quot
-Thread-1trying to get lock0
-Thread-0trying to get lock1
-
-*/
